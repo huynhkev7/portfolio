@@ -1,0 +1,90 @@
+// #honey-comb-gallery {
+//     background-color: #f9faff;
+// }
+
+.grid .h-container .hexagon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fdbf00;
+    -o-transform: skewY(-30deg) rotate(60deg);
+    -moz-transform: skewY(-30deg) rotate(60deg);
+    -webkit-transform: skewY(-30deg) rotate(60deg);
+    -ms-transform: skewY(-30deg) rotate(60deg);
+    transform: skewY(-30deg) rotate(60deg);
+    overflow: hidden;
+}
+
+.grid .h-container {
+    list-style-type: none;
+    position: relative;
+    float: left;
+    width: 27.85714285714286%;
+    padding: 0 0 32.16760145166612% 0;
+    -o-transform: rotate(-60deg) skewY(30deg);
+    -moz-transform: rotate(-60deg) skewY(30deg);
+    -webkit-transform: rotate(-60deg) skewY(30deg);
+    -ms-transform: rotate(-60deg) skewY(30deg);
+    transform: rotate(-60deg) skewY(30deg);
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.grid .h-container:nth-child(3n+2) {
+    margin: 0 1%;
+}
+
+.grid .h-container * {
+    visibility: visible;
+}
+
+
+.even-top {
+    margin-bottom: -7%;
+}
+
+.even-bottom {
+    margin-top: -7%;
+}
+
+.grid .h-container .hexagon img {
+    left:-100%;
+    right:-100%;
+    height:100%;
+    width: auto;
+    margin: 0 auto;
+    -o-transition: all 0.6s linear 0s; 
+    -moz-transition: all 0.6s linear 0s; 
+    -ms-transition: all 0.6s linear 0s; 
+    -webkit-transition: all 0.6s linear 0s; 
+    transition: all 0.6s linear 0s;
+  }
+  
+  .grid .h-container:hover img  {
+    height: 110%;
+    -o-transform: translateZ(0) translateX(-1%) translateY(1%);
+    -moz-transform: translateZ(0) translateX(-1%) translateY(1%);
+    -webkit-transform: translateZ(0) translateX(-1%) translateY(1%);
+    -ms-transform: translateZ(0) translateX(-1%) translateY(1%);
+    transform: translateZ(0) translateX(-1%) translateY(1%);
+  }
+
+  .grid .h-container .hexagon .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(255,255,255,0);
+  }
+  
+  .grid .h-container:hover .hexagon .overlay{
+    -o-transition: all 0.6s linear 0s; 
+    -moz-transition: all 0.6s linear 0s; 
+    -ms-transition: all 0.6s linear 0s; 
+    -webkit-transition: all 0.6s linear 0s; 
+    transition: all 0.6s linear 0s;
+    background: rgba(255,255,255,0.6);
+  }
