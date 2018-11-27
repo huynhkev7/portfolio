@@ -10,7 +10,7 @@ header.masthead {
   }
   
   header.masthead .header-content {
-    max-width: 500px;
+    // max-width: 500px;
     margin-bottom: 100px;
     text-align: center;
   }
@@ -31,9 +31,9 @@ header.masthead {
   
   @media (min-width: 992px) {
     header.masthead {
-      height: 100vh;
-      min-height: 775px;
-      padding-top: 0;
+      // height: 100vh;
+      // min-height: 775px;
+      // padding-top: 0;
       padding-bottom: 0;
     }
     header.masthead .header-content {
@@ -44,7 +44,7 @@ header.masthead {
       font-size: 50px;
     }
     header.masthead .device-container {
-      max-width: 325px;
+      // max-width: 325px;
     }
   }
   
@@ -83,3 +83,8 @@ header.masthead {
       font-size: 70px;
     }
   }
+
+
+.work-banner-img {
+  max-width: 40%;
+}
