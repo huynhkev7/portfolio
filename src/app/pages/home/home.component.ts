@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as _ from 'lodash';
-
+declare var jQuery: any;
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -54,6 +54,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+      this.smoothScrolling();
       const elements = document.getElementsByClassName('txt-rotate');
       for (let i = 0; i < elements.length; i++) {
         const toRotate = elements[i].getAttribute('data-rotate');
@@ -66,5 +67,21 @@ export class HomeComponent implements OnInit {
       css.type = 'text/css';
       css.innerHTML = '.txt-rotate > .wrap { border-right: 0.08em solid #666 }';
       document.body.appendChild(css);
+    }
+
+    smoothScrolling(): void {
+      // Smooth scrolling using jQuery easing
+      jQuery('a.js-scroll-trigger[href*=\'#\']:not([href=\'#\'])').click(function () {
+        if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
+          let target = jQuery(this.hash);
+          target = target.length ? target : jQuery('[name=' + this.hash.slice(1) + ']');
+          if (target.length) {
+            jQuery('html, body').animate({
+              scrollTop: (target.offset().top - 54)
+            }, 1000, 'easeInOutExpo');
+            return false;
+          }
+        }
+      });
     }
 }
