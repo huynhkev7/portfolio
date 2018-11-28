@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as _ from 'lodash';
 declare var jQuery: any;
+declare var particlesJS: any;
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -54,6 +55,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+      particlesJS.load('particles-js', '../../../assets/json/particles.json', null);
       this.smoothScrolling();
       const elements = document.getElementsByClassName('txt-rotate');
       for (let i = 0; i < elements.length; i++) {
