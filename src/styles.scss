@@ -6,3 +6,24 @@
 body {
     font-family: 'Raleway', sans-serif;
 }
+
+
+.zoom-sm {
+    transition: transform 1s;
+}
+
+.zoom-sm:hover {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1); 
+}
+
+.zoom-lg {
+    transition: transform 1s;
+}
+
+.zoom-lg:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+}

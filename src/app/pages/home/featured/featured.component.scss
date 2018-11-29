@@ -7,12 +7,12 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.c-container:hover {
-    opacity: .8;
-    -webkit-transition: 0.2s ease-in;
-    -moz-transition:  0.2s ease-in;
-    transition: 0.2s ease-in;
-}
+// .c-container:hover {
+//     opacity: .8;
+//     -webkit-transition: 0.2s ease-in;
+//     -moz-transition:  0.2s ease-in;
+//     transition: 0.2s ease-in;
+// }
 .c-text {
     background: white;
     border-radius: 4px;
@@ -60,4 +60,9 @@
 
 .fade-out {
     background-color: transparent;
+}
+
+.c-company {
+    font-size: 15px;
+    float: right;
 }
