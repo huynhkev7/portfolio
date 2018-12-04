@@ -55,7 +55,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-      particlesJS.load('particles-js', '../../../assets/json/particles.json', null);
+      particlesJS.load('particles-js', './assets/json/particles.json', null);
       this.smoothScrolling();
       const elements = document.getElementsByClassName('txt-rotate');
       for (let i = 0; i < elements.length; i++) {
