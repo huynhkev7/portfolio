@@ -80,7 +80,7 @@ export class HomeComponent implements OnInit {
           if (target.length) {
             jQuery('html, body').animate({
               scrollTop: (target.offset().top - 54)
-            }, 10, 'easeInOutExpo');
+            }, 400, 'easeInOutExpo');
             return false;
           }
         }
