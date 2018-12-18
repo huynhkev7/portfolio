@@ -11,6 +11,11 @@ import { SalesExpressComponent } from './pages/sales-express/sales-express.compo
 import { FeaturedComponent } from './pages/home/featured/featured.component';
 import { AboutComponent } from './pages/home/about/about.component';
 import { PhotographyComponent } from './pages/home/photography/photography.component';
+// ********************** angular-modal-gallery *****************************
+import 'hammerjs'; // Mandatory for angular-modal-gallery 3.x.x or greater (`npm i --save hammerjs`)
+import 'mousetrap'; // Mandatory for angular-modal-gallery 3.x.x or greater (`npm i --save mousetrap`)
+import { GalleryModule } from '@ks89/angular-modal-gallery';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +29,8 @@ import { PhotographyComponent } from './pages/home/photography/photography.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    GalleryModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

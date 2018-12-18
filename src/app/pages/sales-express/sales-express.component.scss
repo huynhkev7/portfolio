@@ -3,10 +3,10 @@ header.masthead {
     width: 100%;
     padding-top: 150px;
     padding-bottom: 100px;
-    color: white;
-    background: url("../../../assets/img/bg-pattern.png"), #7b4397;
-    background: url("../../../assets/img/bg-pattern.png"), -webkit-gradient(linear, right top, left top, from(#7b4397), to(#dc2430));
-    background: url("../../../assets/img/bg-pattern.png"), linear-gradient(to left, #7b4397, #dc2430);
+    color: black;
+    // background: url("../../../assets/img/bg-pattern.png"), #7b4397;
+    // background: url("../../../assets/img/bg-pattern.png"), -webkit-gradient(linear, right top, left top, from(#7b4397), to(#dc2430));
+    // background: url("../../../assets/img/bg-pattern.png"), linear-gradient(to left, #7b4397, #dc2430);
   }
   
   header.masthead .header-content {
@@ -87,4 +87,49 @@ header.masthead {
 
 .work-banner-img {
   max-width: 40%;
+}
+
+.alternate {
+  background-color: #f9faff;
+  color: black;
+}
+
+// .my-app-custom-image-row {
+//   width: 250px;
+// } 
+
+// .my-app-custom-plain-container-row {
+  
+//   align-items: center;
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: flex-start;
+//   flex-wrap: wrap;
+// }
+
+.img-container {
+  position: relative;
+  border-radius: 5px;
+  margin: 2px;
+}
+
+.more {
+  background: rgba(0, 0, 0, .7);
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.more {
+  span {
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+  }
 }
