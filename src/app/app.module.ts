@@ -15,6 +15,9 @@ import { PhotographyComponent } from './pages/home/photography/photography.compo
 import 'hammerjs'; // Mandatory for angular-modal-gallery 3.x.x or greater (`npm i --save hammerjs`)
 import 'mousetrap'; // Mandatory for angular-modal-gallery 3.x.x or greater (`npm i --save mousetrap`)
 import { GalleryModule } from '@ks89/angular-modal-gallery';
+import { Food2020Component } from './pages/food2020/food2020.component';
+import { G2lComponent } from './pages/g2l/g2l.component';
+import { BentogetherComponent } from './pages/bentogether/bentogether.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { GalleryModule } from '@ks89/angular-modal-gallery';
     SalesExpressComponent,
     FeaturedComponent,
     AboutComponent,
-    PhotographyComponent
+    PhotographyComponent,
+    Food2020Component,
+    G2lComponent,
+    BentogetherComponent
   ],
   imports: [
     BrowserModule,
