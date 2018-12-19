@@ -44,7 +44,7 @@ export class BentogetherComponent implements OnInit {
     new Image(
       0,
       { // modal
-        img: '/assets/img/bentogether/build.png',
+        img: './assets/img/bentogether/build.png',
         extUrl: 'http://www.google.com'
       }
     ),
@@ -80,7 +80,7 @@ export class BentogetherComponent implements OnInit {
     new Image(
       4,
       { // modal
-        img: '/assets/img/sales_express/user_admin_1.png'
+        img: './assets/img/sales_express/user_admin_1.png'
       }
     )
   ];

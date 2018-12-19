@@ -81,7 +81,7 @@ export class Food2020Component implements OnInit {
     new Image(
       4,
       { // modal
-        img: '/assets/img/sales_express/user_admin_1.png'
+        img: './assets/img/sales_express/user_admin_1.png'
       }
     )
   ];

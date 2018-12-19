@@ -44,7 +44,7 @@ export class SalesExpressComponent implements OnInit {
     new Image(
       0,
       { // modal
-        img: '/assets/img/sales_express/geolink.png',
+        img: './assets/img/sales_express/geolink.png',
         extUrl: 'http://www.google.com'
       }
     ),
@@ -58,12 +58,12 @@ export class SalesExpressComponent implements OnInit {
     new Image(
       2,
       { // modal
-        img: '/assets/img/sales_express/leads.png',
+        img: './assets/img/sales_express/leads.png',
         description: 'Description 3',
         extUrl: 'http://www.google.com'
       },
       { // plain
-        img: '/assets/img/sales_express/geolink.png',
+        img: './assets/img/sales_express/geolink.png',
         title: 'custom title 2',
         alt: 'custom alt 2',
         ariaLabel: 'arial label 2'
@@ -72,7 +72,7 @@ export class SalesExpressComponent implements OnInit {
     new Image(
       3,
       { // modal
-        img: '/assets/img/sales_express/erbi_1.png',
+        img: './assets/img/sales_express/erbi_1.png',
         description: 'Description 4',
         extUrl: 'http://www.google.com'
       }
@@ -80,7 +80,7 @@ export class SalesExpressComponent implements OnInit {
     new Image(
       4,
       { // modal
-        img: '/assets/img/sales_express/user_admin_1.png'
+        img: './assets/img/sales_express/user_admin_1.png'
       }
     )
   ];
