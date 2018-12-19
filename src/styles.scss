@@ -73,7 +73,7 @@ body {
   .dot {
     height: 10px;
     width: 10px;
-    background-color: #bbb;
+    background-color: white;
     border-radius: 50%;
     display: inline-block;
   }
@@ -89,3 +89,126 @@ body {
     height: 100px;
     vertical-align: top;
   }
+
+  .alternate {
+    background-color: #1e8bc3;
+    color: white;
+  }
+
+  header.masthead {
+    background-color: #F9FAFF;
+  }
+
+  .my-app-custom-image-row {
+      border-radius: 5px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .more {
+    background: rgba(0, 0, 0, .7);
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .more {
+    span {
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      font-size: 20px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+    }
+  }
+
+  header.masthead {
+    position: relative;
+    width: 100%;
+    padding-top: 150px;
+    color: black;
+  }
+  
+  header.masthead .header-content {
+    margin-bottom: 100px;
+    text-align: center;
+  }
+  
+  header.masthead .header-content h1 {
+    font-size: 30px;
+  }
+  
+  header.masthead .device-container {
+    max-width: 325px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  header.masthead .device-container .screen img {
+    border-radius: 3px;
+  }
+  
+  @media (min-width: 992px) {
+    header.masthead {
+      padding-bottom: 0;
+    }
+    header.masthead .header-content {
+      margin-bottom: 0;
+      text-align: left;
+    }
+    header.masthead .header-content h1 {
+      font-size: 50px;
+    }
+  }
+  
+  section.download {
+    position: relative;
+    padding: 150px 0;
+  }
+  
+  section.download h2 {
+    font-size: 50px;
+    margin-top: 0;
+  }
+  
+  section.download .badges .badge-link {
+    display: block;
+    margin-bottom: 25px;
+  }
+  
+  section.download .badges .badge-link:last-child {
+    margin-bottom: 0;
+  }
+  
+  section.download .badges .badge-link img {
+    height: 60px;
+  }
+  
+  @media (min-width: 768px) {
+    section.download .badges .badge-link {
+      display: inline-block;
+      margin-bottom: 0;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    section.download h2 {
+      font-size: 70px;
+    }
+  }
+
+
+.work-banner-img {
+  max-width: 40%;
+}
+
+.img-container {
+  position: relative;
+  border-radius: 5px;
+  margin: 2px;
+}

@@ -1,102 +1,4 @@
-// #mainNav {
-//     border-color: rgba(34, 34, 34, 0.05);
-//     background-color: rgba(255,255,255,.98);
-//     -webkit-transition: all .35s;
-//     transition: all .35s;
-//     font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
-//     font-weight: 200;
-//     letter-spacing: 1px;
-//     color: rgba(0,0,0,.48);
-//     box-shadow: 0 1px 3px rgba(0,0,0,.08);
-//   }
-  
-//   #mainNav .navbar-brand {
-//     color: rgba(0,0,0,.48);
-//     font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
-//     font-weight: 200;
-//     letter-spacing: 1px;
-//   }
-  
-//   #mainNav .navbar-brand:hover, #mainNav .navbar-brand:focus {
-//     color: #fcbd20;
-//   }
-  
-//   #mainNav .navbar-toggler {
-//     font-size: 12px;
-//     padding: 8px 10px;
-//     color: #222222;
-//   }
-  
-//   #mainNav .navbar-nav > li > a {
-//     font-size: 11px;
-//     font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
-//     letter-spacing: 2px;
-//     text-transform: uppercase;
-//   }
-  
-//   #mainNav .navbar-nav > li > a.active {
-//     color: #fdcc52 !important;
-//     // background-color: transparent;
-//   }
-  
-//   #mainNav .navbar-nav > li > a.active:hover {
-//     // background-color: transparent;
-//   }
-  
-//   #mainNav .navbar-nav > li > a,
-//   #mainNav .navbar-nav > li > a:focus {
-//     color: #222222;
-//   }
-  
-//   #mainNav .navbar-nav > li > a:hover,
-//   #mainNav .navbar-nav > li > a:focus:hover {
-//     color: #fdcc52;
-//   }
-  
-//   @media (min-width: 992px) {
-//     #mainNav {
-//       // border-color: transparent;
-//       // background-color: transparent;
-//     }
-//     #mainNav .navbar-brand {
-//       color: fade(white, 70%);
-//     }
-//     #mainNav .navbar-brand:hover, #mainNav .navbar-brand:focus {
-//       color: rgba(0,0,0,.48);
-//     }
-//     #mainNav .navbar-nav > li > a,
-//     #mainNav .navbar-nav > li > a:focus {
-//       color: rgba(0,0,0,.48);
-//     }
-//     #mainNav .navbar-nav > li > a:hover,
-//     #mainNav .navbar-nav > li > a:focus:hover {
-//       color: rgba(0,0,0,.48);
-//     }
-//     #mainNav.navbar-shrink {
-//       border-color: rgba(34, 34, 34, 0.1);
-//       background-color: white;
-//     }
-//     #mainNav.navbar-shrink .navbar-brand {
-//       color: #222222;
-//     }
-//     #mainNav.navbar-shrink .navbar-brand:hover, #mainNav.navbar-shrink .navbar-brand:focus {
-//       color: #fdcc52;
-//     }
-//     #mainNav.navbar-shrink .navbar-nav > li > a,
-//     #mainNav.navbar-shrink .navbar-nav > li > a:focus {
-//       color: #222222;
-//     }
-//     #mainNav.navbar-shrink .navbar-nav > li > a:hover,
-//     #mainNav.navbar-shrink .navbar-nav > li > a:focus:hover {
-//       color: #fdcc52;
-//     }
-//   }
-  
-
 #mainNav {
-  // background-color: #212529;
-  //     border-color: rgba(34, 34, 34, 0.05);
-    // background-color: rgba(255,255,255,.98);
     -webkit-transition: all .35s;
     transition: all .35s;
     font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
@@ -108,23 +10,24 @@
 }
 
 #mainNav .navbar-toggler {
-  // font-size: 12px;
   right: 0;
   padding: 13px;
   text-transform: uppercase;
-  color: skyblue;
+  color: 	#ED6660;
   border: 0;
-  // background-color: #fed136;
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 #mainNav .navbar-brand {
-  color: skyblue;
+  transition: all 0.3s;
+  letter-spacing: 5px;
+  font-weight: 300;
+  color: 	#ED6660;
   font-family: 'Kaushan Script', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 #mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-  color: skyblue;
+  color: 	#ED6660;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
@@ -137,7 +40,7 @@
 }
 
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: skyblue;
+  color: 	#ED6660;
 }
 
 @media (min-width: 992px) {
@@ -150,9 +53,10 @@
     background-color: white;
   }
   #mainNav .navbar-brand {
-    font-size: 1.75em;
-    -webkit-transition: all 0.3s;
+    font-size: 25px;
     transition: all 0.3s;
+    letter-spacing: 10px;
+    font-weight: 300;
   }
   #mainNav .navbar-nav .nav-item .nav-link {
     padding: 1.1em 1em !important;

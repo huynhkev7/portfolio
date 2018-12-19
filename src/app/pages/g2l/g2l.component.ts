@@ -44,21 +44,21 @@ export class G2lComponent implements OnInit {
     new Image(
       0,
       { // modal
-        img: '/assets/img/sales_express/geolink.png',
+        img: '/assets/img/g2l/g2l.png',
         extUrl: 'http://www.google.com'
       }
     ),
     new Image(
       1,
       { // modal
-        img: './assets/img/sales_express/anira.png',
+        img: './assets/img/g2l/rubric.jpg',
         description: 'Description 2'
       }
     ),
     new Image(
       2,
       { // modal
-        img: '/assets/img/sales_express/leads.png',
+        img: '/assets/img/g2l/g2l-banner-com.jpg',
         description: 'Description 3',
         extUrl: 'http://www.google.com'
       },
