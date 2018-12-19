@@ -71,20 +71,12 @@
     transform: translateZ(0) translateX(-1%) translateY(.4%);
   }
 
-//   .grid .h-container .hexagon .overlay {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     height: 100%;
-//     width: 100%;
-//     background: rgba(255,255,255,0);
-//   }
+.fa-instagram{
+    cursor: pointer;
+    color: rgba(0,0,0,.3);
+    transition: color 0.5s ease;
+  }
   
-//   .grid .h-container:hover .hexagon .overlay{
-//     -o-transition: all 0.6s linear 0s; 
-//     -moz-transition: all 0.6s linear 0s; 
-//     -ms-transition: all 0.6s linear 0s; 
-//     -webkit-transition: all 0.6s linear 0s; 
-//     transition: all 0.6s linear 0s;
-//     background: rgba(255,255,255,0.6);
-//   }
+.fa-instagram:hover {
+    color: 	#ED6660;
+  }
