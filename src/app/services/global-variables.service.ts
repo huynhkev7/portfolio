@@ -1,15 +1,24 @@
 import { Injectable } from '@angular/core';
+import { Observable, BehaviorSubject} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GlobalVariablesService {
-  private showProgressBar = false;
-  constructor() { }
-  setProgressBar(flag) {
-    this.showProgressBar = flag;
+  public flag: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+
+  constructor() {
+    this.flag.next(false);
   }
-  getProgressBar() {
-    return this.showProgressBar;
+
+  public setToTrue() {
+    this.flag.next(true);
+  }
+  public setToFalse() {
+    this.flag.next(false);
+  }
+  public getStatus() {
+    console.log(this.flag);
+    return this.flag;
   }
 }

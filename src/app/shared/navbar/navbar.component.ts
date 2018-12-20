@@ -1,9 +1,16 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, HostListener} from '@angular/core';
 declare var jQuery: any;
 import { GlobalVariablesService } from '../../services/global-variables.service';
 import { GlobalPositionStrategy } from '@angular/cdk/overlay';
 import * as _ from 'lodash';
-import { Router } from '@angular/router';
+import {
+  Event,
+  NavigationCancel,
+  NavigationEnd,
+  NavigationError,
+  NavigationStart,
+  Router } from '@angular/router';
+  import { Observable, BehaviorSubject} from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
@@ -12,12 +19,54 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
   @Input() title: String;
+  public loading: boolean;
+  progresValue: number;
+  rangeArray: number[];
+
+
   public test: Object = {
   };
 
   constructor(
-    private router: Router
-  ) {}
+    private router: Router,
+    public global: GlobalVariablesService
+  ) {
+    this.progresValue = 0;
+    this.rangeArray = new Array(100);
+        // this.loading = true;
+    this.router.events.subscribe((val) => {
+      console.log(val instanceof NavigationStart);
+      if (val instanceof NavigationStart) {
+        this.configureTrue(this.global);
+      } else {
+        this.configureFalse(this.global);
+      }
+    });
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+   const element = document.documentElement,
+   body = document.body,
+   scrollTop = 'scrollTop',
+   scrollHeight = 'scrollHeight';
+   this.progresValue =
+   (element[scrollTop] || body[scrollTop]) /
+   ((element[scrollHeight] || body[scrollHeight]) - element.clientHeight) * 100;
+  }
+
+  configureTrue(ev): void {
+    ev.setToTrue();
+  }
+  configureFalse(ev): void {
+    setTimeout(function() {
+        ev.setToFalse();
+    }, 250);
+  }
+
+  getStatus(): void {
+    this.global.getStatus().subscribe(value => this.loading = value);
+  }
 
   ngOnInit(): void {
     this.smoothScrolling();

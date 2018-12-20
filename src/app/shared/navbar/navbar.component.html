@@ -52,9 +52,13 @@
               </ul>
             </div>
           </div>
-          <div class="row progress-bar">
+          <div class="row progress-bar" *ngIf="global.getStatus() | async">
             <mat-progress-bar
-              color="accent" mode="indeterminate">
+             mode="indeterminate">
             </mat-progress-bar>
           </div>
+          <div class="row progress-bar">
+            <mat-progress-bar color="accent" mode="determinate" [value]="progresValue" *ngIf="progresValue > 0">
+            </mat-progress-bar>
+            </div>
         </nav>
