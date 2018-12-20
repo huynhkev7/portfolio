@@ -21,6 +21,7 @@ import { BentogetherComponent } from './pages/bentogether/bentogether.component'
 // Import library module
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { MatButtonModule, MatCardModule, MatProgressBarModule, MatToolbarModule } from '@angular/material';
+import { ResumeComponent } from './pages/resume/resume.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { MatButtonModule, MatCardModule, MatProgressBarModule, MatToolbarModule 
     PhotographyComponent,
     Food2020Component,
     G2lComponent,
-    BentogetherComponent
+    BentogetherComponent,
+    ResumeComponent
   ],
   imports: [
     BrowserModule,
