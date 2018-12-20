@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgxSpinnerService } from 'ngx-spinner';
 import {
   AccessibilityConfig,
   Action,
@@ -93,7 +94,7 @@ export class BentogetherComponent implements OnInit {
     layout: new AdvancedLayout(-1, true)
   };
 
-  constructor() { }
+  constructor(private spinner: NgxSpinnerService) { }
 
   ngOnInit() {
   }

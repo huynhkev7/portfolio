@@ -1,17 +1,22 @@
 import { Component, OnInit, Input } from '@angular/core';
 declare var jQuery: any;
+import { GlobalVariablesService } from '../../services/global-variables.service';
+import { GlobalPositionStrategy } from '@angular/cdk/overlay';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-
   @Input() title: String;
   public test: Object = {
   };
 
-  constructor() {
+  constructor(public globals: GlobalVariablesService) {
+   }
+
+   showBar(): boolean {
+     return this.globals.getProgressBar();
    }
 
   ngOnInit(): void {

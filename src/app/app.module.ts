@@ -18,6 +18,9 @@ import { GalleryModule } from '@ks89/angular-modal-gallery';
 import { Food2020Component } from './pages/food2020/food2020.component';
 import { G2lComponent } from './pages/g2l/g2l.component';
 import { BentogetherComponent } from './pages/bentogether/bentogether.component';
+// Import library module
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { MatButtonModule, MatCardModule, MatProgressBarModule, MatToolbarModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,9 @@ import { BentogetherComponent } from './pages/bentogether/bentogether.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    GalleryModule.forRoot()
+    GalleryModule.forRoot(),
+    NgxSpinnerModule,
+    MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
