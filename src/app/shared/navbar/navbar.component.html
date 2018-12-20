@@ -30,6 +30,15 @@
 
  
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" [ngClass]="{'black-navbar': showBlackBar()}" id="mainNav">
+          <div class="row progress-bar" *ngIf="global.getStatus() | async">
+              <mat-progress-bar
+              color="primary" mode="indeterminate">
+              </mat-progress-bar>
+            </div>
+            <div class="row progress-bar">
+              <mat-progress-bar color="accent" mode="determinate" [value]="progresValue" *ngIf="progresValue > 0">
+              </mat-progress-bar>
+              </div>
           <div class="container">
             <a class="navbar-brand" [routerLink]="['/portfolio']">Kevin Huynh</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,13 +61,4 @@
               </ul>
             </div>
           </div>
-          <div class="row progress-bar" *ngIf="global.getStatus() | async">
-            <mat-progress-bar
-            color="primary" mode="indeterminate">
-            </mat-progress-bar>
-          </div>
-          <div class="row progress-bar">
-            <mat-progress-bar color="accent" mode="determinate" [value]="progresValue" *ngIf="progresValue > 0">
-            </mat-progress-bar>
-            </div>
         </nav>
