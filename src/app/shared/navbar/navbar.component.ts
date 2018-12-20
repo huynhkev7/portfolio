@@ -61,7 +61,7 @@ export class NavbarComponent implements OnInit {
   configureFalse(ev): void {
     setTimeout(function() {
         ev.setToFalse();
-    }, 250);
+    }, 1000);
   }
 
   getStatus(): void {
