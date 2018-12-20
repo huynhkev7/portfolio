@@ -2,6 +2,9 @@ import { Component, OnInit, Input } from '@angular/core';
 declare var jQuery: any;
 import { GlobalVariablesService } from '../../services/global-variables.service';
 import { GlobalPositionStrategy } from '@angular/cdk/overlay';
+import * as _ from 'lodash';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -12,29 +15,26 @@ export class NavbarComponent implements OnInit {
   public test: Object = {
   };
 
-  constructor(public globals: GlobalVariablesService) {
-   }
-
-   showBar(): boolean {
-     return this.globals.getProgressBar();
-   }
+  constructor(
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.smoothScrolling();
   }
 
-  // showBlackBar(): boolean {
-  //   const excludes = ['/', '/products', '/reviews', '/splash'];
-  //   return !_.includes(excludes, this.router.url);
-  // }
+  showBlackBar(): boolean {
+    const excludes = ['/', '/#about', '/#featured', '/splash'];
+    return !_.includes(excludes, this.router.url);
+  }
 
-  // isActive(currentNav: string): boolean {
-  //   if (_.isEqual(this.router.url, '')) {
-  //     return true;
-  //   }
+  isActive(currentNav: string): boolean {
+    if (_.isEqual(this.router.url, '')) {
+      return true;
+    }
 
-  //   return _.isEqual(this.router.url, currentNav);
-  // }
+    return _.isEqual(this.router.url, currentNav);
+  }
 
   smoothScrolling(): void {
     // Smooth scrolling using jQuery easing
@@ -66,7 +66,7 @@ export class NavbarComponent implements OnInit {
     const navbarCollapse = function () {
       const mainNav = jQuery('#mainNav');
       const path = location.pathname.replace(/^\//, '');
-      if (mainNav.offset().top > 100 || (path.length > 0 && (!path.includes('#') || !path.includes('portfolio')))) {
+      if (mainNav.offset().top > 100) {
         mainNav.addClass('navbar-shrink');
       } else {
         mainNav.removeClass('navbar-shrink');
