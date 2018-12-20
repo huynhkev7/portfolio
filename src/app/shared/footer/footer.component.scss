@@ -1,13 +1,14 @@
 footer {
     padding: 100px 0;
     text-align: center;
-    background-color: #f5f5f5;
+    background-color: #212529;
+    color: white;
   }
   
   footer p {
     font-size: 15px;
     letter-spacing: 2px;
-    color: rgba(0,0,0,.3);
+    color: white;
   }
   
   footer ul {
@@ -16,7 +17,7 @@ footer {
   
   footer ul li a i{
     // font-size: 30px;
-    color: rgba(0,0,0,.3);
+    color: white;
     transition: color 0.5s ease;
   }
   
