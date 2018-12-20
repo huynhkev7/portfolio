@@ -65,7 +65,8 @@ export class NavbarComponent implements OnInit {
     // Collapse Navbar
     const navbarCollapse = function () {
       const mainNav = jQuery('#mainNav');
-      if (mainNav.offset().top > 100) {
+      const path = location.pathname.replace(/^\//, '');
+      if (mainNav.offset().top > 100 || (path.length > 0 && (!path.includes('#') || !path.includes('portfolio')))) {
         mainNav.addClass('navbar-shrink');
       } else {
         mainNav.removeClass('navbar-shrink');
