@@ -18,7 +18,6 @@ export class GlobalVariablesService {
     this.flag.next(false);
   }
   public getStatus() {
-    console.log(this.flag);
     return this.flag;
   }
 }

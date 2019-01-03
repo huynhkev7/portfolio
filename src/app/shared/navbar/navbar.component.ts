@@ -35,7 +35,6 @@ export class NavbarComponent implements OnInit {
     this.rangeArray = new Array(100);
         // this.loading = true;
     this.router.events.subscribe((val) => {
-      console.log(val instanceof NavigationStart);
       if (val instanceof NavigationStart) {
         this.configureTrue(this.global);
       } else {
