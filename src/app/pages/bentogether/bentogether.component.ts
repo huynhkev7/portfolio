@@ -45,26 +45,26 @@ export class BentogetherComponent implements OnInit {
     new Image(
       0,
       { // modal
-        img: './assets/img/bentogether/build.png',
+        img: './assets/img/bentogether/build.jpg',
         extUrl: 'http://www.google.com'
       }
     ),
     new Image(
       1,
       { // modal
-        img: './assets/img/bentogether/stats.png',
+        img: './assets/img/bentogether/stats.jpg',
         description: 'Description 2'
       }
     ),
     new Image(
       2,
       { // modal
-        img: './assets/img/bentogether/custom.png',
+        img: './assets/img/bentogether/custom.jpg',
         description: 'Description 3',
         extUrl: 'http://www.google.com'
       },
       { // plain
-        img: './assets/img/bentogether/login.png',
+        img: './assets/img/bentogether/login.jpg',
         title: 'custom title 2',
         alt: 'custom alt 2',
         ariaLabel: 'arial label 2'
@@ -73,7 +73,7 @@ export class BentogetherComponent implements OnInit {
     new Image(
       3,
       { // modal
-        img: './assets/img/bentogether/pet.png',
+        img: './assets/img/bentogether/pet.jpg',
         description: 'Description 4',
         extUrl: 'http://www.google.com'
       }
@@ -81,7 +81,7 @@ export class BentogetherComponent implements OnInit {
     new Image(
       4,
       { // modal
-        img: './assets/img/sales_express/user_admin_1.png'
+        img: './assets/img/sales_express/user_admin_1.jpg'
       }
     )
   ];

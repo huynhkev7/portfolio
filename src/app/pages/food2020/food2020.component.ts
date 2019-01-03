@@ -45,26 +45,26 @@ export class Food2020Component implements OnInit {
     new Image(
       0,
       { // modal
-        img: './assets/img/food2020/food2020_1.png',
+        img: './assets/img/food2020/food2020_1.jpg',
         extUrl: 'http://www.google.com'
       }
     ),
     new Image(
       1,
       { // modal
-        img: './assets/img/food2020/food_2020_2.png',
+        img: './assets/img/food2020/food_2020_2.jpg',
         description: 'Description 2'
       }
     ),
     new Image(
       2,
       { // modal
-        img: './assets/img/food2020/food_2020_3.png',
+        img: './assets/img/food2020/food_2020_3.jpg',
         description: 'Description 3',
         extUrl: 'http://www.google.com'
       },
       { // plain
-        img: './assets/img/food2020/food_2020_4.png',
+        img: './assets/img/food2020/food_2020_4.jpg',
         title: 'custom title 2',
         alt: 'custom alt 2',
         ariaLabel: 'arial label 2'
@@ -73,7 +73,7 @@ export class Food2020Component implements OnInit {
     new Image(
       3,
       { // modal
-        img: './assets/img/food2020/food_2020_6.png',
+        img: './assets/img/food2020/food_2020_6.jpg',
         description: 'Description 4',
         extUrl: 'http://www.google.com'
       }
@@ -81,7 +81,7 @@ export class Food2020Component implements OnInit {
     new Image(
       4,
       { // modal
-        img: './assets/img/sales_express/user_admin_1.png'
+        img: './assets/img/sales_express/user_admin_1.jpg'
       }
     )
   ];

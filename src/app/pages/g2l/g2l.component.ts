@@ -44,7 +44,7 @@ export class G2lComponent implements OnInit {
     new Image(
       0,
       { // modal
-        img: './assets/img/g2l/g2l.png',
+        img: './assets/img/g2l/g2l.jpg',
         extUrl: 'http://www.google.com'
       }
     ),
@@ -63,7 +63,7 @@ export class G2lComponent implements OnInit {
         extUrl: 'http://www.google.com'
       },
       { // plain
-        img: './assets/img/sales_express/geolink.png',
+        img: './assets/img/sales_express/geolink.jpg',
         title: 'custom title 2',
         alt: 'custom alt 2',
         ariaLabel: 'arial label 2'
@@ -72,7 +72,7 @@ export class G2lComponent implements OnInit {
     new Image(
       3,
       { // modal
-        img: './assets/img/sales_express/erbi_1.png',
+        img: './assets/img/sales_express/erbi_1.jpg',
         description: 'Description 4',
         extUrl: 'http://www.google.com'
       }
@@ -80,7 +80,7 @@ export class G2lComponent implements OnInit {
     new Image(
       4,
       { // modal
-        img: './assets/img/sales_express/user_admin_1.png'
+        img: './assets/img/sales_express/user_admin_1.jpg'
       }
     )
   ];
