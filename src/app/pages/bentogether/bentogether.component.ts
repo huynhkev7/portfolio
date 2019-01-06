@@ -46,42 +46,49 @@ export class BentogetherComponent implements OnInit {
       0,
       { // modal
         img: './assets/img/bentogether/build.jpg',
-        extUrl: 'http://www.google.com'
+        description: 'Meal creation'
       }
     ),
     new Image(
       1,
       { // modal
         img: './assets/img/bentogether/stats.jpg',
-        description: 'Description 2'
+        description: 'Meal nutrition'
       }
     ),
     new Image(
       2,
       { // modal
-        img: './assets/img/bentogether/custom.jpg',
-        description: 'Description 3',
-        extUrl: 'http://www.google.com'
-      },
-      { // plain
-        img: './assets/img/bentogether/login.jpg',
-        title: 'custom title 2',
-        alt: 'custom alt 2',
-        ariaLabel: 'arial label 2'
+        img: './assets/img/bentogether/download.jpg',
+        description: 'Project board'
       }
     ),
     new Image(
       3,
       { // modal
-        img: './assets/img/bentogether/pet.jpg',
-        description: 'Description 4',
-        extUrl: 'http://www.google.com'
+        img: './assets/img/bentogether/custom.jpg',
+        description: 'Pet customization',
       }
     ),
     new Image(
       4,
       { // modal
-        img: './assets/img/sales_express/user_admin_1.jpg'
+        img: './assets/img/bentogether/pet.jpg',
+        description: 'Pet selection'
+      }
+    ),
+    new Image(
+      5,
+      { // modal
+        img: './assets/img/bentogether/bento.jpg',
+        description: 'Digital bento box design'
+      }
+    ),
+    new Image(
+      6,
+      { // modal
+        img: './assets/img/bentogether/prototype_1.jpg',
+        description: 'First iteration of physical bento box with Arduino'
       }
     )
   ];

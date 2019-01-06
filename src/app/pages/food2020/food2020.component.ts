@@ -46,42 +46,36 @@ export class Food2020Component implements OnInit {
       0,
       { // modal
         img: './assets/img/food2020/food2020_1.jpg',
-        extUrl: 'http://www.google.com'
+        description: 'Upcoming events'
       }
     ),
     new Image(
       1,
       { // modal
         img: './assets/img/food2020/food_2020_2.jpg',
-        description: 'Description 2'
+        description: 'Event invitations'
       }
     ),
     new Image(
       2,
       { // modal
         img: './assets/img/food2020/food_2020_3.jpg',
-        description: 'Description 3',
-        extUrl: 'http://www.google.com'
-      },
-      { // plain
-        img: './assets/img/food2020/food_2020_4.jpg',
-        title: 'custom title 2',
-        alt: 'custom alt 2',
-        ariaLabel: 'arial label 2'
+        description: 'Map view of nearby restaurants'
       }
     ),
     new Image(
       3,
       { // modal
-        img: './assets/img/food2020/food_2020_6.jpg',
-        description: 'Description 4',
-        extUrl: 'http://www.google.com'
+        img: './assets/img/food2020/food_2020_4.jpg',
+        description: 'List view of nearby restaurants'
       }
     ),
     new Image(
       4,
       { // modal
-        img: './assets/img/sales_express/user_admin_1.jpg'
+        img: './assets/img/food2020/food_2020_6.jpg',
+        description: 'User research findings',
+        extUrl: 'http://www.google.com'
       }
     )
   ];

@@ -45,42 +45,21 @@ export class G2lComponent implements OnInit {
       0,
       { // modal
         img: './assets/img/g2l/g2l.jpg',
-        extUrl: 'http://www.google.com'
+        description: 'Website wireframe'
       }
     ),
     new Image(
       1,
       { // modal
         img: './assets/img/g2l/rubric.jpg',
-        description: 'Description 2'
+        description: 'Heuristic evaluation findings'
       }
     ),
     new Image(
       2,
       { // modal
         img: './assets/img/g2l/g2l-banner-com.jpg',
-        description: 'Description 3',
-        extUrl: 'http://www.google.com'
-      },
-      { // plain
-        img: './assets/img/sales_express/geolink.jpg',
-        title: 'custom title 2',
-        alt: 'custom alt 2',
-        ariaLabel: 'arial label 2'
-      }
-    ),
-    new Image(
-      3,
-      { // modal
-        img: './assets/img/sales_express/erbi_1.jpg',
-        description: 'Description 4',
-        extUrl: 'http://www.google.com'
-      }
-    ),
-    new Image(
-      4,
-      { // modal
-        img: './assets/img/sales_express/user_admin_1.jpg'
+        description: 'Finalized website design'
       }
     )
   ];
