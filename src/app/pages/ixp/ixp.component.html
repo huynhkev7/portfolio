@@ -1,0 +1,126 @@
+<header class="masthead">
+  <div class="container">
+        <div class="header-content">
+          <h1 class="text-center">Sales Express</h1>
+          <p class="subhead text-center">Internal Sales Tool</p>
+          <img class="work-banner-img img-fluid mx-auto d-block mb-5" src="./assets/img/sales_express/dashboard_1.jpg">
+      </div>
+  </div>
+  <div class="container pb-2">
+    <div class="row mb-5">
+      <div class="col-md-3">
+        <h3 class="text-uppercae">Overview</h3>
+      </div>
+      <div class="col-offset-md-1 col-md-8">
+        <p>The Integrated Experience Platform (IXP) is a micro-frontend solution that provides AT&T business center employees the ability to quickly track customer order information. Utilizing cutting edge microservice and web component technology, IXP is a fully operating and customizable user interface that has been easily consumed by over five critical AT&T applications.</p>
+      </div>      
+    </div>
+    <div class="row mb-5">
+        <div class="col-md-3">
+          <h3 class="text-uppercae">Role</h3>
+        </div>
+        <div class="col-offset-md-1 col-md-8">
+          <p>As a full-stack engineer, I worked as both the subject matter expert in developing reusable UI components, scalable information visualation of over 900 data points, and developing API endpoints connected to the K2View fabric.
+          </p>
+        </div>      
+      </div>
+      <div class="row mb-5">
+        <div class="col-md-3">
+          <h3 class="text-uppercae">Duration</h3>
+        </div>
+        <div class="col-offset-md-1 col-md-8">
+          <p>February 2019 - December 2019</p>
+        </div>      
+      </div>
+  </div>
+</header>
+<section class="alternate">
+  <div class="container pt-5">
+      <div class="row mb-5">
+          <div class="col-md-3">
+            <h3 class="text-uppercae">Technologies</h3>
+          </div>
+
+          <div class="col-offset-md-1 col-md-8">
+              <ul class="list-inline">
+                  <li class="list-inline-item tech-icon">
+                    Angular 2
+                    <span class="dot align-middle mx-1"></span>
+                  </li>        
+                  <li class="list-inline-item tech-icon">
+                      Node.js
+                      <span class="dot align-middle mx-1"></span>
+                  </li>   
+                  <li class="list-inline-item tech-icon">
+                      Express
+                      <span class="dot align-middle mx-1"></span>
+                  </li>   
+                  <li class="list-inline-item tech-icon">
+                      MongoDB
+                      <span class="dot align-middle mx-1"></span>
+                  </li>   
+                  <li class="list-inline-item tech-icon">
+                    TypeScript
+                    <span class="dot align-middle mx-1"></span>
+                  </li>   
+                  <li class="list-inline-item tech-icon">
+                    Kubernetes
+                    <span class="dot align-middle mx-1"></span>
+                  </li>  
+                  <li class="list-inline-item tech-icon">
+                    Docker
+                    <span class="dot align-middle mx-1"></span>
+                  </li>  
+                  <li class="list-inline-item tech-icon">
+                    Jasmine
+                    <span class="dot align-middle mx-1"></span>
+                  </li> 
+                  <li class="list-inline-item tech-icon">
+                    HTML
+                    <span class="dot align-middle mx-1"></span>
+                  </li>
+                  <li class="list-inline-item tech-icon">
+                      CSS
+                      <span class="dot align-middle mx-1"></span>
+                  </li>
+                  <li class="list-inline-item tech-icon">
+                      JavaScript
+                  </li>                                 
+                </ul>
+          </div>      
+      </div>
+      <div class="row pb-5">
+          <div class="col-md-3">
+            <h3 class="text-uppercae">Features</h3>
+          </div>
+          <div class="col-offset-md-1 col-md-8">
+            <div class="my-app-custom-plain-container-row d-flex flex-lg-row flex-column">
+              <ng-container *ngFor="let img of images; let i = index">
+                <div class="img-container" *ngIf="i < 2"> <!-- 2 is a fixed value that I'm using to display only two images -->
+                  <div class="more" *ngIf="i==1" (click)="openImageModalRow(img)">
+                    <span>
+                      +{{images.length - 2}} more
+                    </span>
+                  </div>
+                  <img *ngIf="img.plain && img.plain.img; else noThumb"
+                       class="my-app-custom-image-row"
+                       [src]="img.plain.img"
+                       (click)="openImageModalRow(img)"
+                       [alt]="img.modal.description"/>
+          
+                  <ng-template #noThumb>
+                    <img class="img-fluid my-app-custom-image-row"
+                         [src]="img.modal.img"
+                         (click)="openImageModalRow(img)"
+                         [alt]="img.modal.description"/>
+                  </ng-template>
+                </div>
+              </ng-container>
+            </div>
+            <ks-modal-gallery [id]="6" [modalImages]="images"
+                              [plainGalleryConfig]="customPlainGalleryRowConfig"></ks-modal-gallery>
+            
+          </div>      
+      </div>
+  </div>
+</section>

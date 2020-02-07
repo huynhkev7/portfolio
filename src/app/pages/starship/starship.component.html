@@ -1,0 +1,118 @@
+<header class="masthead">
+  <div class="container">
+        <div class="header-content">
+          <h1 class="text-center">Sales Express</h1>
+          <p class="subhead text-center">Internal Sales Tool</p>
+          <img class="work-banner-img img-fluid mx-auto d-block mb-5" src="./assets/img/sales_express/dashboard_1.jpg">
+      </div>
+  </div>
+  <div class="container pb-2">
+    <div class="row mb-5">
+      <div class="col-md-3">
+        <h3 class="text-uppercae">Overview</h3>
+      </div>
+      <div class="col-offset-md-1 col-md-8">
+        <p>Sales Express is an AT&T internal sales tool used by over 14,000 business sellers. Its purpose is to provide a streamlined and intuitive sales experience for discovering, contracting, subscribing customers to over 20 core AT&T products and services.</p>
+      </div>      
+    </div>
+    <div class="row mb-5">
+        <div class="col-md-3">
+          <h3 class="text-uppercae">Role</h3>
+        </div>
+        <div class="col-offset-md-1 col-md-8">
+          <p>As a software engineer for Sales Express, I work on both the infrastructure and reporting teams. I am responsible for integrating common service utilities to improve overall application performance, APIs, security, and IT workflows. In addition, I lead the design and maintenance of Sales Express reporting utilities, so that critical business data is sent to AT&T leadership.
+          </p>
+        </div>      
+      </div>
+      <div class="row mb-5">
+        <div class="col-md-3">
+          <h3 class="text-uppercae">Duration</h3>
+        </div>
+        <div class="col-offset-md-1 col-md-8">
+          <p>June 2016 - Present</p>
+        </div>      
+      </div>
+  </div>
+</header>
+<section class="alternate">
+  <div class="container pt-5">
+      <div class="row mb-5">
+          <div class="col-md-3">
+            <h3 class="text-uppercae">Technologies</h3>
+          </div>
+
+          <div class="col-offset-md-1 col-md-8">
+              <ul class="list-inline">
+                  <li class="list-inline-item tech-icon">
+                    HTML
+                    <span class="dot align-middle mx-1"></span>
+                  </li>
+                  <li class="list-inline-item tech-icon">
+                      CSS
+                      <span class="dot align-middle mx-1"></span>
+                  </li>
+                  <li class="list-inline-item tech-icon">
+                      JavaScript
+                      <span class="dot align-middle mx-1"></span>
+                  </li>
+                  <li class="list-inline-item tech-icon">
+                      Angular
+                      <span class="dot align-middle mx-1"></span>
+                  </li>        
+                  <li class="list-inline-item tech-icon">
+                      jQuery
+                      <span class="dot align-middle mx-1"></span>
+                  </li>
+                  <li class="list-inline-item tech-icon">
+                      Java
+                      <span class="dot align-middle mx-1"></span>
+                  </li>   
+                  <li class="list-inline-item tech-icon">
+                      Spring
+                      <span class="dot align-middle mx-1"></span>
+                  </li>   
+                  <li class="list-inline-item tech-icon">
+                      Hibernate
+                      <span class="dot align-middle mx-1"></span>
+                  </li>    
+                  <li class="list-inline-item tech-icon">
+                      Oracle SQL
+                  </li>                                       
+                </ul>
+          </div>      
+      </div>
+      <div class="row pb-5">
+          <div class="col-md-3">
+            <h3 class="text-uppercae">Features</h3>
+          </div>
+          <div class="col-offset-md-1 col-md-8">
+            <div class="my-app-custom-plain-container-row d-flex flex-lg-row flex-column">
+              <ng-container *ngFor="let img of images; let i = index">
+                <div class="img-container" *ngIf="i < 2"> <!-- 2 is a fixed value that I'm using to display only two images -->
+                  <div class="more" *ngIf="i==1" (click)="openImageModalRow(img)">
+                    <span>
+                      +{{images.length - 2}} more
+                    </span>
+                  </div>
+                  <img *ngIf="img.plain && img.plain.img; else noThumb"
+                       class="my-app-custom-image-row"
+                       [src]="img.plain.img"
+                       (click)="openImageModalRow(img)"
+                       [alt]="img.modal.description"/>
+          
+                  <ng-template #noThumb>
+                    <img class="img-fluid my-app-custom-image-row"
+                         [src]="img.modal.img"
+                         (click)="openImageModalRow(img)"
+                         [alt]="img.modal.description"/>
+                  </ng-template>
+                </div>
+              </ng-container>
+            </div>
+            <ks-modal-gallery [id]="6" [modalImages]="images"
+                              [plainGalleryConfig]="customPlainGalleryRowConfig"></ks-modal-gallery>
+            
+          </div>      
+      </div>
+  </div>
+</section>

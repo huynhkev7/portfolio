@@ -22,6 +22,9 @@ import { BentogetherComponent } from './pages/bentogether/bentogether.component'
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { MatButtonModule, MatCardModule, MatProgressBarModule, MatToolbarModule } from '@angular/material';
 import { ResumeComponent } from './pages/resume/resume.component';
+import { AttComponent } from './pages/att/att.component';
+import { IxpComponent } from './pages/ixp/ixp.component';
+import { StarshipComponent } from './pages/starship/starship.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,10 @@ import { ResumeComponent } from './pages/resume/resume.component';
     Food2020Component,
     G2lComponent,
     BentogetherComponent,
-    ResumeComponent
+    ResumeComponent,
+    AttComponent,
+    IxpComponent,
+    StarshipComponent
   ],
   imports: [
     BrowserModule,
