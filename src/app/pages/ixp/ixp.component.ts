@@ -44,42 +44,133 @@ export class IxpComponent implements OnInit {
     new Image(
       0,
       { // modal
-        img: './assets/img/sales_express/dashboard_1.jpg',
+        img: './assets/img/ixp/ixp1.jpg',
         description: 'Dashboard page',
       }
     ),
     new Image(
       1,
       { // modal
-        img: './assets/img/sales_express/anira.jpg',
+        img: './assets/img/ixp/ixp2.jpg',
         description: 'Order handoff page'
       }
     ),
     new Image(
       2,
       { // modal
-        img: './assets/img/sales_express/report_4.jpg',
+        img: './assets/img/ixp/ixp3.jpg',
         description: 'Reports page',
       }
     ),
     new Image(
       3,
       { // modal
-        img: './assets/img/sales_express/user_admin_3.jpg',
+        img: './assets/img/ixp/ixp4.jpg',
         description: 'User admin page',
       }
     ),
     new Image(
       4,
       { // modal
-        img: './assets/img/sales_express/erbi_1.jpg',
+        img: './assets/img/ixp/ixp5.jpg',
         description: 'Business Object Reports',
       }
     ),
     new Image(
       5,
       { // modal
-        img: './assets/img/sales_express/universe.jpg',
+        img: './assets/img/ixp/ixp6.jpg',
+        description: 'Data repository for report generations'
+      }
+    ),
+    new Image(
+      6,
+      { // modal
+        img: './assets/img/ixp/ixp7.jpg',
+        description: 'Data repository for report generations'
+      }
+    ),
+    new Image(
+      7,
+      { // modal
+        img: './assets/img/ixp/ixp8.jpg',
+        description: 'Data repository for report generations'
+      }
+    ),
+    new Image(
+      8,
+      { // modal
+        img: './assets/img/ixp/ixp9.jpg',
+        description: 'Data repository for report generations'
+      }
+    ),
+    new Image(
+      9,
+      { // modal
+        img: './assets/img/ixp/ixp10.jpg',
+        description: 'Data repository for report generations'
+      }
+    ),
+    new Image(
+      10,
+      { // modal
+        img: './assets/img/ixp/ixp11.jpg',
+        description: 'Data repository for report generations'
+      }
+    ),
+    new Image(
+      11,
+      { // modal
+        img: './assets/img/ixp/ixp12.jpg',
+        description: 'Data repository for report generations'
+      }
+    ),
+    new Image(
+      12,
+      { // modal
+        img: './assets/img/ixp/ixp13.jpg',
+        description: 'Data repository for report generations'
+      }
+    ),
+    new Image(
+      13,
+      { // modal
+        img: './assets/img/ixp/ixp14.jpg',
+        description: 'Data repository for report generations'
+      }
+    ),
+    new Image(
+      14,
+      { // modal
+        img: './assets/img/ixp/ixp15.jpg',
+        description: 'Data repository for report generations'
+      }
+    ),
+    new Image(
+      15,
+      { // modal
+        img: './assets/img/ixp/ixp16.jpg',
+        description: 'Data repository for report generations'
+      }
+    ),
+    new Image(
+      16,
+      { // modal
+        img: './assets/img/ixp/ixp16.jpg',
+        description: 'Data repository for report generations'
+      }
+    ),
+    new Image(
+      17,
+      { // modal
+        img: './assets/img/ixp/ixp17.jpg',
+        description: 'Data repository for report generations'
+      }
+    ),
+    new Image(
+      18,
+      { // modal
+        img: './assets/img/ixp/ixp18.jpg',
         description: 'Data repository for report generations'
       }
     )
