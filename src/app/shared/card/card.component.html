@@ -1,0 +1,23 @@
+<div class="mb-4 col-lg-12 fade-out my-5">
+    <div class="row no-gutters h-100">
+        <div class="col-md-8 c-image" [ngClass]="position === 'left' ? 'order-md-2 order-xs-1' : ''">
+            <img [src]="imageUrl" class="c-container img-fluid"/>
+          </div>
+        <div class="col-md-4 c-body align-self-center " [ngClass]="position === 'left' ? 'order-md-1 order-xs-2' : ''">
+            <div routerLink="{{route}}" class="c-text c-{{position}} zoom-sm card">
+                  <div class="text-left pl-3 pt-4">
+                      <h4 class="card-title">
+                          <strong>{{projectName}}</strong>
+                          <span class="c-company mr-3">{{companyName}}</span>
+                        </h4>
+                        <h5>{{jobTitle}}</h5>
+                        <h5><span class="badge badge-pill badge-info">Info</span></h5>
+                        <p class="card-text">{{jobDescription}}</p>                          
+                  </div>
+                  <div class="text-right pr-3 py-3">
+                      <button type="button" class="btn c-button">View</button>
+                  </div>
+            </div>
+          </div>
+    </div>
+</div>

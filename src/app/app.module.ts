@@ -25,6 +25,7 @@ import { ResumeComponent } from './pages/resume/resume.component';
 import { AttComponent } from './pages/att/att.component';
 import { IxpComponent } from './pages/ixp/ixp.component';
 import { StarshipComponent } from './pages/starship/starship.component';
+import { CardComponent } from './shared/card/card.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { StarshipComponent } from './pages/starship/starship.component';
     ResumeComponent,
     AttComponent,
     IxpComponent,
-    StarshipComponent
+    StarshipComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,
