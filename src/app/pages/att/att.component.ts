@@ -35,11 +35,13 @@ import {
   styleUrls: ['./att.component.scss']
 })
 export class AttComponent implements OnInit {
-  customPlainGalleryRowConfig: PlainGalleryConfig = {
-    strategy: PlainGalleryStrategy.CUSTOM,
-    layout: new AdvancedLayout(-1, true)
-  };
-
+  projectName = 'AT&T';
+  projectType = 'E-Commerce';
+  heroUrl = './assets/img/att/att5.jpg';
+  projectDescription = `One of AT&T's most heavily trafficked value streams, AT&T.com supports millions of customers nationwide shop their favorite AT&T products and manage their cellular services. The product details page (PDP) serves as part of ATT.com's buy flow for products ranging from phones, tablets, accessories, and more.`;
+  roleDescription = `As a full-stack engineer, I helped lead and develop AT&T.com's redesign initative (PSC) to revolutionize the buy flow experience. I developed highly complex and reusable pricing components and service providers, allowing customers to be able to learn, purchase, and configure their devices all in one streamlined flow. I helped integrate Google AMP to reduce AT&T.com's page load times to less than a second on mobile devices. In addition, I perform emergency hotfixes and mentor other AT&T.com developers.`;
+  skills: string[] = ['React', 'Next.js', 'Node.js', 'Express', 'Jest', 'Enzyme', 'HTML', 'CSS', 'JavaScript', 'TypeScript', 'Google AMP', 'Java'];
+  duration = 'December 2019 - Present';
   images: Image[] = [
     new Image(
       0,
@@ -133,41 +135,8 @@ export class AttComponent implements OnInit {
       }
     )
   ];
-  customPlainGalleryColumnConfig: PlainGalleryConfig = {
-    strategy: PlainGalleryStrategy.CUSTOM,
-    layout: new AdvancedLayout(-1, true)
-  };
-  customPlainGalleryRowDescConfig: PlainGalleryConfig = {
-    strategy: PlainGalleryStrategy.CUSTOM,
-    layout: new AdvancedLayout(-1, true)
-  };
 
   constructor() { }
   ngOnInit() {
-  }
-
-  openImageModalRow(image: Image) {
-    console.log('Opening modal gallery from custom plain gallery row, with image: ', image);
-    const index: number = this.getCurrentIndexCustomLayout(image, this.images);
-    this.customPlainGalleryRowConfig = Object.assign({}, this.customPlainGalleryRowConfig, { layout: new AdvancedLayout(index, true) });
-  }
-
-  private getCurrentIndexCustomLayout(image: Image, images: Image[]): number {
-    return image ? images.indexOf(image) : -1;
-  }
-  openImageModalColumn(image: Image) {
-    console.log('Opening modal gallery from custom plain gallery column, with image: ', image);
-    const index: number = this.getCurrentIndexCustomLayout(image, this.images);
-    this.customPlainGalleryColumnConfig
-     = Object.assign({}, this.customPlainGalleryColumnConfig, { layout: new AdvancedLayout(index, true) });
-  }
-  onCloseImageModal(event: ImageModalEvent) {
-    console.log('onClose action: ' + Action[event.action]);
-    console.log('onClose result:' + event.result);
-    // reset custom plain gallery config
-    this.customPlainGalleryRowConfig = Object.assign({}, this.customPlainGalleryRowConfig, { layout: new AdvancedLayout(-1, true) });
-    this.customPlainGalleryColumnConfig = Object.assign({}, this.customPlainGalleryColumnConfig, { layout: new AdvancedLayout(-1, true) });
-    this.customPlainGalleryRowDescConfig
-    = Object.assign({}, this.customPlainGalleryRowDescConfig, { layout: new AdvancedLayout(-1, true) });
   }
 }

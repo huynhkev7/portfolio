@@ -35,10 +35,13 @@ import {
   styleUrls: ['./ixp.component.scss']
 })
 export class IxpComponent implements OnInit {
-  customPlainGalleryRowConfig: PlainGalleryConfig = {
-    strategy: PlainGalleryStrategy.CUSTOM,
-    layout: new AdvancedLayout(-1, true)
-  };
+  projectName = 'Integrated Experience Platform<';
+  projectType = 'Internal Sales Tool';
+  heroUrl = './assets/img/ixp/ixp1.jpg';
+  projectDescription = `The Integrated Experience Platform (IXP) is a micro-frontend solution that provides AT&T business center employees the ability to quickly track customer order information. Utilizing cutting edge microservice and web component technology, IXP is a fully operating and customizable user interface that is easily consumable by five critical AT&T applications and counting. IXP dramatically reduces time and development costs by being a portable widget on any web-based application.`;
+  roleDescription = `As a full-stack engineer, I worked as both the subject matter expert in developing web components and managing microservice health and deployments. I worked on back-end mapping over 900 data points and developed scalable information visualizations. In addition,  I developed core API endpoints connected to the K2View fabric and admin utility to manage user permissions.`;
+  skills: string[] = ['Angular 2', 'Node.js', 'Express', 'MongoDB', 'TypeScript', 'Kubernetes', 'Docker', 'Jasmine', 'HTML', 'CSS', 'JavaScript'];
+  duration = 'February 2019 - December 2019';
 
   images: Image[] = [
     new Image(
@@ -175,41 +178,8 @@ export class IxpComponent implements OnInit {
       }
     )
   ];
-  customPlainGalleryColumnConfig: PlainGalleryConfig = {
-    strategy: PlainGalleryStrategy.CUSTOM,
-    layout: new AdvancedLayout(-1, true)
-  };
-  customPlainGalleryRowDescConfig: PlainGalleryConfig = {
-    strategy: PlainGalleryStrategy.CUSTOM,
-    layout: new AdvancedLayout(-1, true)
-  };
 
   constructor() { }
   ngOnInit() {
-  }
-
-  openImageModalRow(image: Image) {
-    console.log('Opening modal gallery from custom plain gallery row, with image: ', image);
-    const index: number = this.getCurrentIndexCustomLayout(image, this.images);
-    this.customPlainGalleryRowConfig = Object.assign({}, this.customPlainGalleryRowConfig, { layout: new AdvancedLayout(index, true) });
-  }
-
-  private getCurrentIndexCustomLayout(image: Image, images: Image[]): number {
-    return image ? images.indexOf(image) : -1;
-  }
-  openImageModalColumn(image: Image) {
-    console.log('Opening modal gallery from custom plain gallery column, with image: ', image);
-    const index: number = this.getCurrentIndexCustomLayout(image, this.images);
-    this.customPlainGalleryColumnConfig
-     = Object.assign({}, this.customPlainGalleryColumnConfig, { layout: new AdvancedLayout(index, true) });
-  }
-  onCloseImageModal(event: ImageModalEvent) {
-    console.log('onClose action: ' + Action[event.action]);
-    console.log('onClose result:' + event.result);
-    // reset custom plain gallery config
-    this.customPlainGalleryRowConfig = Object.assign({}, this.customPlainGalleryRowConfig, { layout: new AdvancedLayout(-1, true) });
-    this.customPlainGalleryColumnConfig = Object.assign({}, this.customPlainGalleryColumnConfig, { layout: new AdvancedLayout(-1, true) });
-    this.customPlainGalleryRowDescConfig
-    = Object.assign({}, this.customPlainGalleryRowDescConfig, { layout: new AdvancedLayout(-1, true) });
   }
 }

@@ -38,7 +38,7 @@ export class FeaturedComponent implements OnInit {
       route: '/starship',
     },
     {
-      imageUrl: './assets/img/starship/starship-1.jpg',
+      imageUrl: './assets/img/sales_express/dashboard_1.jpg',
       companyName: 'AT&T',
       projectName: 'Sales Express',
       jobTitle: 'Software Engineer',
@@ -48,7 +48,7 @@ export class FeaturedComponent implements OnInit {
       route: '/sales-express',
     },
     {
-      imageUrl: './assets/img/starship/starship-1.jpg',
+      imageUrl: './assets/img/food2020/food_2020_5.jpg',
       companyName: 'AT&T',
       projectName: 'Food 2020',
       jobTitle: 'Software Developer Intern',
@@ -58,7 +58,7 @@ export class FeaturedComponent implements OnInit {
       route: '/food2020',
     },
     {
-      imageUrl: './assets/img/starship/starship-1.jpg',
+      imageUrl: './assets/img/g2l/g2l-banner-com.jpg',
       companyName: 'G2L',
       projectName: 'G2l Redesign',
       jobTitle: 'UX Designer',
@@ -68,7 +68,7 @@ export class FeaturedComponent implements OnInit {
       route: '/g2l',
     },
     {
-      imageUrl: './assets/img/starship/starship-1.jpg',
+      imageUrl: './assets/img/bentogether/login_3.jpg',
       companyName: 'UW',
       projectName: 'BenTogether',
       jobTitle: 'UI Developer & Researcher',

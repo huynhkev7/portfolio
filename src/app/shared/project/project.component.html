@@ -1,0 +1,88 @@
+<header class="masthead">
+    <div class="container">
+          <div class="header-content">
+            <h1 class="text-center">{{projectName}}</h1>
+            <p class="subhead text-center">{{projectType}}</p>
+            <img class="work-banner-img img-fluid mx-auto d-block mb-5" [src]="heroUrl">
+        </div>
+    </div>
+    <div class="container pb-2">
+      <div class="row mb-5">
+        <div class="col-md-3">
+          <h3 class="text-uppercae">Overview</h3>
+        </div>
+        <div class="col-offset-md-1 col-md-8">
+          <p>{{projectDescription}}</p>
+        </div>      
+      </div>
+      <div class="row mb-5">
+          <div class="col-md-3">
+            <h3 class="text-uppercae">Role</h3>
+          </div>
+          <div class="col-offset-md-1 col-md-8">
+            <p>
+                {{roleDescription}}
+            </p>
+          </div>      
+        </div>
+        <div class="row mb-5">
+          <div class="col-md-3">
+            <h3 class="text-uppercae">Duration</h3>
+          </div>
+          <div class="col-offset-md-1 col-md-8">
+            <p>{{duration}}</p>
+          </div>      
+        </div>
+    </div>
+  </header>
+  <section class="alternate">
+    <div class="container pt-5">
+        <div class="row mb-5">
+            <div class="col-md-3">
+              <h3 class="text-uppercae">Technologies</h3>
+            </div>
+  
+            <div class="col-offset-md-1 col-md-8">
+                <ul class="list-inline">
+                    <li  *ngFor="let skill of skills; let i = index" class="list-inline-item tech-icon">
+                    {{skill}}
+                    <span *ngIf="i < skills.length - 1" class="dot align-middle mx-1"></span>
+                    </li>                               
+                </ul>
+            </div>      
+        </div>
+        <div class="row pb-5">
+            <div class="col-md-3">
+              <h3 class="text-uppercae">Features</h3>
+            </div>
+            <div class="col-offset-md-1 col-md-8">
+              <div class="my-app-custom-plain-container-row d-flex flex-lg-row flex-column">
+                <ng-container *ngFor="let img of images; let i = index">
+                  <div class="img-container" *ngIf="i < 2"> <!-- 2 is a fixed value that I'm using to display only two images -->
+                    <div class="more" *ngIf="i==1" (click)="openImageModalRow(img)">
+                      <span>
+                        +{{images.length - 2}} more
+                      </span>
+                    </div>
+                    <img *ngIf="img.plain && img.plain.img; else noThumb"
+                         class="my-app-custom-image-row"
+                         [src]="img.plain.img"
+                         (click)="openImageModalRow(img)"
+                         [alt]="img.modal.description"/>
+            
+                    <ng-template #noThumb>
+                      <img class="img-fluid my-app-custom-image-row"
+                           [src]="img.modal.img"
+                           (click)="openImageModalRow(img)"
+                           [alt]="img.modal.description"/>
+                    </ng-template>
+                  </div>
+                </ng-container>
+              </div>
+              <ks-modal-gallery [id]="6" [modalImages]="images"
+                                [plainGalleryConfig]="customPlainGalleryRowConfig"></ks-modal-gallery>
+              
+            </div>      
+        </div>
+    </div>
+  </section>

@@ -35,10 +35,13 @@ import {
   styleUrls: ['./sales-express.component.scss']
 })
 export class SalesExpressComponent implements OnInit {
-  customPlainGalleryRowConfig: PlainGalleryConfig = {
-    strategy: PlainGalleryStrategy.CUSTOM,
-    layout: new AdvancedLayout(-1, true)
-  };
+  projectName = 'Sales Express';
+  projectType = 'Internal Sales Tool';
+  heroUrl = './assets/img/sales_express/dashboard_1.jpg';
+  projectDescription = `Sales Express is an AT&T internal sales tool used by over 14,000 business sellers. Its purpose is to provide a streamlined and intuitive sales experience for discovering, contracting, subscribing customers to over 20 core AT&T products and services.`;
+  roleDescription = `As a software engineer for Sales Express, I work on both the infrastructure and reporting teams. I am responsible for integrating common service utilities to improve overall application performance, APIs, security, and IT workflows. In addition, I lead the design and maintenance of Sales Express reporting utilities, so that critical business data is sent to AT&T leadership.`;
+  skills: string[] = ['HTML', 'CSS', 'JavaScript', 'jQuery', 'Angular', 'Java', 'Spring', 'Hibernate', 'Oracle SQL'];
+  duration = 'June 2016 - December 2018';
 
   images: Image[] = [
     new Image(
@@ -84,41 +87,8 @@ export class SalesExpressComponent implements OnInit {
       }
     )
   ];
-  customPlainGalleryColumnConfig: PlainGalleryConfig = {
-    strategy: PlainGalleryStrategy.CUSTOM,
-    layout: new AdvancedLayout(-1, true)
-  };
-  customPlainGalleryRowDescConfig: PlainGalleryConfig = {
-    strategy: PlainGalleryStrategy.CUSTOM,
-    layout: new AdvancedLayout(-1, true)
-  };
 
   constructor() { }
   ngOnInit() {
-  }
-
-  openImageModalRow(image: Image) {
-    console.log('Opening modal gallery from custom plain gallery row, with image: ', image);
-    const index: number = this.getCurrentIndexCustomLayout(image, this.images);
-    this.customPlainGalleryRowConfig = Object.assign({}, this.customPlainGalleryRowConfig, { layout: new AdvancedLayout(index, true) });
-  }
-
-  private getCurrentIndexCustomLayout(image: Image, images: Image[]): number {
-    return image ? images.indexOf(image) : -1;
-  }
-  openImageModalColumn(image: Image) {
-    console.log('Opening modal gallery from custom plain gallery column, with image: ', image);
-    const index: number = this.getCurrentIndexCustomLayout(image, this.images);
-    this.customPlainGalleryColumnConfig
-     = Object.assign({}, this.customPlainGalleryColumnConfig, { layout: new AdvancedLayout(index, true) });
-  }
-  onCloseImageModal(event: ImageModalEvent) {
-    console.log('onClose action: ' + Action[event.action]);
-    console.log('onClose result:' + event.result);
-    // reset custom plain gallery config
-    this.customPlainGalleryRowConfig = Object.assign({}, this.customPlainGalleryRowConfig, { layout: new AdvancedLayout(-1, true) });
-    this.customPlainGalleryColumnConfig = Object.assign({}, this.customPlainGalleryColumnConfig, { layout: new AdvancedLayout(-1, true) });
-    this.customPlainGalleryRowDescConfig
-    = Object.assign({}, this.customPlainGalleryRowDescConfig, { layout: new AdvancedLayout(-1, true) });
   }
 }

@@ -35,11 +35,13 @@ import {
   styleUrls: ['./food2020.component.scss']
 })
 export class Food2020Component implements OnInit {
-
-  customPlainGalleryRowConfig: PlainGalleryConfig = {
-    strategy: PlainGalleryStrategy.CUSTOM,
-    layout: new AdvancedLayout(-1, true)
-  };
+  projectName = 'Food 2020';
+  projectType = 'Social Event Planner';
+  heroUrl = './assets/img/food2020/food_2020_5.jpg';
+  projectDescription = `Food2020 was a mobile responsive Angular application developed as part of the AT&T intern coding challenge. Its purpose was to improve workplace culture by providing a platform for employees to easily socialize and coordinate luncheon events.`;
+  roleDescription = `As a software developer intern, I collaborated with a team of five other interns, under a highly Agile development process. I was responsible for integrating front-end functionality, such as party voting, restaurant searching, interfacing with multiple APIs (Yelp, Google, etc.), and performing CRUD operations for managing events.`;
+  skills: string[] = ['HTML', 'CSS', 'JavaScript', 'Angular', 'Bootstrap', 'Parse'];
+  duration = 'September 2015 - June 2016';
 
   images: Image[] = [
     new Image(
@@ -91,30 +93,5 @@ export class Food2020Component implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  }
-
-  openImageModalRow(image: Image) {
-    console.log('Opening modal gallery from custom plain gallery row, with image: ', image);
-    const index: number = this.getCurrentIndexCustomLayout(image, this.images);
-    this.customPlainGalleryRowConfig = Object.assign({}, this.customPlainGalleryRowConfig, { layout: new AdvancedLayout(index, true) });
-  }
-
-  private getCurrentIndexCustomLayout(image: Image, images: Image[]): number {
-    return image ? images.indexOf(image) : -1;
-  }
-  openImageModalColumn(image: Image) {
-    console.log('Opening modal gallery from custom plain gallery column, with image: ', image);
-    const index: number = this.getCurrentIndexCustomLayout(image, this.images);
-    this.customPlainGalleryColumnConfig
-     = Object.assign({}, this.customPlainGalleryColumnConfig, { layout: new AdvancedLayout(index, true) });
-  }
-  onCloseImageModal(event: ImageModalEvent) {
-    console.log('onClose action: ' + Action[event.action]);
-    console.log('onClose result:' + event.result);
-    // reset custom plain gallery config
-    this.customPlainGalleryRowConfig = Object.assign({}, this.customPlainGalleryRowConfig, { layout: new AdvancedLayout(-1, true) });
-    this.customPlainGalleryColumnConfig = Object.assign({}, this.customPlainGalleryColumnConfig, { layout: new AdvancedLayout(-1, true) });
-    this.customPlainGalleryRowDescConfig
-    = Object.assign({}, this.customPlainGalleryRowDescConfig, { layout: new AdvancedLayout(-1, true) });
   }
 }

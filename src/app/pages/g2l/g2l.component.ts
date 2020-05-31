@@ -35,10 +35,13 @@ import {
   styleUrls: ['./g2l.component.scss']
 })
 export class G2lComponent implements OnInit {
-  customPlainGalleryRowConfig: PlainGalleryConfig = {
-    strategy: PlainGalleryStrategy.CUSTOM,
-    layout: new AdvancedLayout(-1, true)
-  };
+  projectName = 'Global to Local';
+  projectType = 'Website Redesign';
+  heroUrl = './assets/img/g2l/g2l-banner-com.jpg';
+  projectDescription = `Global to Local (G2L) is a non-profit organization that offers health services and programs to community members. Upon identifying gaps with information accessbility, we embarked on a user-centered design process to deliver a website the resonates with end users.`;
+  roleDescription = `In a team of two, I worked as the UX designer and UI developer. I helped conduct user interviews, user testing, and developed high-fidelity prototypes.`;
+  skills: string[] = ['Axure', 'HTML', 'CSS', 'JavaScript', 'jQuery', 'SquareSpace'];
+  duration = 'June 2015 - June 2016';
 
   images: Image[] = [
     new Image(
@@ -75,30 +78,5 @@ export class G2lComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  }
-
-  openImageModalRow(image: Image) {
-    console.log('Opening modal gallery from custom plain gallery row, with image: ', image);
-    const index: number = this.getCurrentIndexCustomLayout(image, this.images);
-    this.customPlainGalleryRowConfig = Object.assign({}, this.customPlainGalleryRowConfig, { layout: new AdvancedLayout(index, true) });
-  }
-
-  private getCurrentIndexCustomLayout(image: Image, images: Image[]): number {
-    return image ? images.indexOf(image) : -1;
-  }
-  openImageModalColumn(image: Image) {
-    console.log('Opening modal gallery from custom plain gallery column, with image: ', image);
-    const index: number = this.getCurrentIndexCustomLayout(image, this.images);
-    this.customPlainGalleryColumnConfig
-     = Object.assign({}, this.customPlainGalleryColumnConfig, { layout: new AdvancedLayout(index, true) });
-  }
-  onCloseImageModal(event: ImageModalEvent) {
-    console.log('onClose action: ' + Action[event.action]);
-    console.log('onClose result:' + event.result);
-    // reset custom plain gallery config
-    this.customPlainGalleryRowConfig = Object.assign({}, this.customPlainGalleryRowConfig, { layout: new AdvancedLayout(-1, true) });
-    this.customPlainGalleryColumnConfig = Object.assign({}, this.customPlainGalleryColumnConfig, { layout: new AdvancedLayout(-1, true) });
-    this.customPlainGalleryRowDescConfig
-    = Object.assign({}, this.customPlainGalleryRowDescConfig, { layout: new AdvancedLayout(-1, true) });
   }
 }

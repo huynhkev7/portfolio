@@ -26,6 +26,7 @@ import { AttComponent } from './pages/att/att.component';
 import { IxpComponent } from './pages/ixp/ixp.component';
 import { StarshipComponent } from './pages/starship/starship.component';
 import { CardComponent } from './shared/card/card.component';
+import { ProjectComponent } from './shared/project/project.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { CardComponent } from './shared/card/card.component';
     IxpComponent,
     StarshipComponent,
     CardComponent,
+    ProjectComponent,
   ],
   imports: [
     BrowserModule,
