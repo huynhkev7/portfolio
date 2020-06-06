@@ -41,7 +41,7 @@ export class BentogetherComponent implements OnInit {
     layout: new AdvancedLayout(-1, true)
   };
 
-  projectName = 'Bentogether';
+  projectName = 'BenTogether';
   projectType = 'Food education system';
   heroUrl = './assets/img/bentogether/login_3.jpg';
   projectDescription = `BenTogether is a digital bento box paired with a mobile application, developed as part of the Human Centered Design & Engineering (HCDE) senior capstone project. Its purpose is to teach families about food education, while strengthening family relationships through gamifying the lunch making process.`;

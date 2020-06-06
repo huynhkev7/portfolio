@@ -27,6 +27,8 @@ import { IxpComponent } from './pages/ixp/ixp.component';
 import { StarshipComponent } from './pages/starship/starship.component';
 import { CardComponent } from './shared/card/card.component';
 import { ProjectComponent } from './shared/project/project.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { ProjectService } from './project.service';
 
 @NgModule({
   declarations: [
@@ -53,9 +55,10 @@ import { ProjectComponent } from './shared/project/project.component';
     AppRoutingModule,
     GalleryModule.forRoot(),
     NgxSpinnerModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    SlickCarouselModule
   ],
-  providers: [],
+  providers: [ProjectService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

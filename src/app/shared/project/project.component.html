@@ -1,12 +1,14 @@
 <header class="masthead">
-    <div class="container">
-          <div class="header-content">
-            <h1 class="text-center">{{projectName}}</h1>
-            <p class="subhead text-center">{{projectType}}</p>
-            <img class="work-banner-img img-fluid mx-auto d-block mb-5" [src]="heroUrl">
-        </div>
+  <div class="container pt-4 pb-2">
+    <div class="header-content">
+      <h1 class="text-center">{{projectName}}</h1>
+      <p class="subhead text-center">{{projectType}}</p>
+      <!-- <img class="work-banner-img img-fluid mx-auto d-block mb-5" [src]="heroUrl"> -->
+      </div>
     </div>
-    <div class="container pb-2">
+    <div class="container-fluid hero" [ngStyle]="{'background-image': 'url(' + heroUrl + ')'}">
+    </div>
+    <div class="container pb-2 pt-4">
       <div class="row mb-5">
         <div class="col-md-3">
           <h3 class="text-uppercae">Overview</h3>
@@ -85,4 +87,38 @@
             </div>      
         </div>
     </div>
+  </section>
+
+  <section>
+    <div class="container pt-4">
+      <div class="header-content">
+        <h1 class="text-center">Other Projects</h1>
+        </div>
+      </div>
+      <div class="container rel pt-4 pb-4">
+        <ngx-slick-carousel class="carousel" 
+          #slickModal="slick-carousel" 
+          [config]="slideConfig" 
+          (init)="slickInit($event)"
+          (breakpoint)="breakpoint($event)"
+          (afterChange)="afterChange($event)"
+          (beforeChange)="beforeChange($event)">
+            <div ngxSlickItem *ngFor="let project of otherProjects" class="slide">
+              <div class="card" style="width: 18rem; height: 23rem;">
+                <img class="card-img-top" [src]="project.imageUrl" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">{{project.projectName}}</h5>
+                  <p class="card-text">{{trim(project.jobDescription)}}</p>
+                  <a href="#" routerLink="{{project.route}}" class="btn c-button">View</a>
+                </div>
+              </div>
+            </div>
+        </ngx-slick-carousel>
+        <div class="left">
+          <i class="fas fa-arrow-left zoom-lg fs-50" (click)="slickModal.slickPrev()" ></i>
+        </div>
+        <div class="right">
+          <i class="fas fa-arrow-right zoom-lg fs-50" (click)="slickModal.slickNext()" ></i>
+        </div>
+      </div>
   </section>
