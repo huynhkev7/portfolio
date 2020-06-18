@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class ProjectService {
+  pp = '-366629684';
 
   projects: any[] = [
     {
@@ -10,9 +11,10 @@ export class ProjectService {
       projectName: 'AT&T',
       jobTitle: 'Software Engineer',
       jobDescription: 'AT&T.com supports millions of customers nationwide shop their favorite AT&T products and manage their cellular services.',
-      tags: ['test', 'test2'],
+      tags: ['React', 'Next.js', 'SEO', 'Responsive', 'Accessibility'],
       position: 'left',
       route: '/att',
+      protected: false,
     },
     {
       imageUrl: './assets/img/ixp/ixp1.jpg',
@@ -20,9 +22,10 @@ export class ProjectService {
       projectName: 'IXP',
       jobTitle: 'Software Engineer',
       jobDescription: 'Leading edge micro-frontend utility to perform order inventory lookup on any web-based application.',
-      tags: ['test', 'test2'],
+      tags: ['Angular 8', 'Node.js', 'Web Components', 'Responsive', 'Microservices'],
       position: 'right',
       route: '/ixp',
+      protected: true,
     },
     {
       imageUrl: './assets/img/starship/starship-1.jpg',
@@ -30,9 +33,10 @@ export class ProjectService {
       projectName: 'Starship',
       jobTitle: 'Software Engineer',
       jobDescription: 'Dashboard application providing portals to AT&T internal microservice applications.',
-      tags: ['test', 'test2'],
+      tags: ['Angular 4', 'High Availability', 'Microservices', 'Kubernetes'],
       position: 'left',
       route: '/starship',
+      protected: true,
     },
     {
       imageUrl: './assets/img/sales_express/dashboard_1.jpg',
@@ -40,9 +44,10 @@ export class ProjectService {
       projectName: 'Sales Express',
       jobTitle: 'Software Engineer',
       jobDescription: 'Internal sales tool for core AT&T products and services.',
-      tags: ['test', 'test2'],
+      tags: ['Java', 'SQL', 'DevOps', 'Reporting', 'Mobile-First'],
       position: 'right',
       route: '/sales-express',
+      protected: true,
     },
     {
       imageUrl: './assets/img/food2020/food_2020_5.jpg',
@@ -50,9 +55,10 @@ export class ProjectService {
       projectName: 'Food 2020',
       jobTitle: 'Software Developer Intern',
       jobDescription: 'Social event planner to help improve workplace culture.',
-      tags: ['test', 'test2'],
+      tags: ['AngularJS', 'Bootstrap', 'Parse', 'Coding Challenge'],
       position: 'left',
       route: '/food2020',
+      protected: false,
     },
     {
       imageUrl: './assets/img/g2l/g2l-banner-com.jpg',
@@ -60,9 +66,10 @@ export class ProjectService {
       projectName: 'G2l Redesign',
       jobTitle: 'UX Designer',
       jobDescription: 'Website resdesign of local non-profit.',
-      tags: ['test', 'test2'],
+      tags: ['User Research', 'User Testing', 'Prototyping'],
       position: 'right',
       route: '/g2l',
+      protected: false,
     },
     {
       imageUrl: './assets/img/bentogether/login_3_copy.jpg',
@@ -70,9 +77,10 @@ export class ProjectService {
       projectName: 'BenTogether',
       jobTitle: 'UI Developer & Researcher',
       jobDescription: 'Digital bento box synced with mobile application to improve food education and familial bonding through the lunch making process.',
-      tags: ['test', 'test2'],
+      tags: ['Physical Computing', 'Apache Cordova', 'User Research', 'User Testing'],
       position: 'left',
       route: '/bentogether',
+      protected: false,
     },
   ];
 
@@ -101,5 +109,24 @@ export class ProjectService {
       }
     });
     return otherProjects;
+  }
+
+  hashCode (str) {
+      let hash = 0;
+      if (str.length == 0) return hash;
+      for (let i = 0; i < str.length; i++) {
+          const char = str.charCodeAt(i);
+          hash = ((hash<<5) - hash) + char;
+          hash = hash & hash; // Convert to 32bit integer
+      }
+      return hash;
+  }
+
+  isMatch(p: string): boolean {
+    if (p && this.hashCode(p).toString() === this.pp) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }

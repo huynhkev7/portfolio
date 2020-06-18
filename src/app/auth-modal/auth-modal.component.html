@@ -1,0 +1,12 @@
+<div class="container-fluid auth-modal"  *ngIf="show === false">
+  <div class="jumbotron auth-jumbotron">
+    <h1 class="display-4">Protected Page</h1>
+    <p class="lead">Please provide passphrase</p>  
+    <hr class="my-4">
+    <div>
+      <div class="form-group auth-form">
+        <input type="password" required="required" [(ngModel)]="p" class="form-control" id="exampleInputPassword1" placeholder="Passphrase">
+      </div>
+        <a class="c-button btn zoom-sm" (click)="unlock()">Unlock</a>
+  </div>
+</div>

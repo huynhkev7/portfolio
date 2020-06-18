@@ -29,6 +29,8 @@ import { CardComponent } from './shared/card/card.component';
 import { ProjectComponent } from './shared/project/project.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { ProjectService } from './project.service';
+import { AuthModalComponent } from './auth-modal/auth-modal.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -49,14 +51,16 @@ import { ProjectService } from './project.service';
     StarshipComponent,
     CardComponent,
     ProjectComponent,
+    AuthModalComponent,
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     GalleryModule.forRoot(),
     NgxSpinnerModule,
     MatProgressBarModule,
-    SlickCarouselModule
+    SlickCarouselModule,
   ],
   providers: [ProjectService],
   bootstrap: [AppComponent]

@@ -35,10 +35,14 @@ import {
   styleUrls: ['./starship.component.scss']
 })
 export class StarshipComponent implements OnInit {
-  customPlainGalleryRowConfig: PlainGalleryConfig = {
-    strategy: PlainGalleryStrategy.CUSTOM,
-    layout: new AdvancedLayout(-1, true)
-  };
+  projectName = 'Starship';
+  projectType = 'Internal Sales Tool';
+  heroUrl = './assets/img/starship/starship-1.jpg';
+  projectDescription = `Dashboard application providing a convenient user view of consolidated portals to AT&T microservices. In addition, Starship provides rapid onboarding and permission based framework across internal AT&T microservice applications.`;
+  roleDescription = `As a full-stack engineer for Starship, I worked across five microservices to establish high availability and load balance in order to improve platform resilience. In addition, I upgraded application security by integrating security scanning and resolved a multitude of front-end production defects.`;
+  skills: string[] = ['Angular', 'HTML', 'CSS', 'JavaScript', 'TypeScript', 'Java', 'Spring', 'Kubernetes', 'Docker', 'Oracle SQL'];
+  duration = 'November 2018 - March 2019';
+  protect = true;
 
   images: Image[] = [
     new Image(
@@ -63,41 +67,7 @@ export class StarshipComponent implements OnInit {
       }
     ),
   ];
-  customPlainGalleryColumnConfig: PlainGalleryConfig = {
-    strategy: PlainGalleryStrategy.CUSTOM,
-    layout: new AdvancedLayout(-1, true)
-  };
-  customPlainGalleryRowDescConfig: PlainGalleryConfig = {
-    strategy: PlainGalleryStrategy.CUSTOM,
-    layout: new AdvancedLayout(-1, true)
-  };
-
   constructor() { }
   ngOnInit() {
-  }
-
-  openImageModalRow(image: Image) {
-    console.log('Opening modal gallery from custom plain gallery row, with image: ', image);
-    const index: number = this.getCurrentIndexCustomLayout(image, this.images);
-    this.customPlainGalleryRowConfig = Object.assign({}, this.customPlainGalleryRowConfig, { layout: new AdvancedLayout(index, true) });
-  }
-
-  private getCurrentIndexCustomLayout(image: Image, images: Image[]): number {
-    return image ? images.indexOf(image) : -1;
-  }
-  openImageModalColumn(image: Image) {
-    console.log('Opening modal gallery from custom plain gallery column, with image: ', image);
-    const index: number = this.getCurrentIndexCustomLayout(image, this.images);
-    this.customPlainGalleryColumnConfig
-     = Object.assign({}, this.customPlainGalleryColumnConfig, { layout: new AdvancedLayout(index, true) });
-  }
-  onCloseImageModal(event: ImageModalEvent) {
-    console.log('onClose action: ' + Action[event.action]);
-    console.log('onClose result:' + event.result);
-    // reset custom plain gallery config
-    this.customPlainGalleryRowConfig = Object.assign({}, this.customPlainGalleryRowConfig, { layout: new AdvancedLayout(-1, true) });
-    this.customPlainGalleryColumnConfig = Object.assign({}, this.customPlainGalleryColumnConfig, { layout: new AdvancedLayout(-1, true) });
-    this.customPlainGalleryRowDescConfig
-    = Object.assign({}, this.customPlainGalleryRowDescConfig, { layout: new AdvancedLayout(-1, true) });
   }
 }

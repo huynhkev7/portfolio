@@ -47,6 +47,7 @@ export class ProjectComponent implements OnInit {
     @Input() skills: string[];
     @Input() duration: string;
     @Input() images: Image[];
+    @Input() protect: boolean;
 
     otherProjects: any[] = [];
 

@@ -42,6 +42,7 @@ export class SalesExpressComponent implements OnInit {
   roleDescription = `As a software engineer for Sales Express, I work on both the infrastructure and reporting teams. I am responsible for integrating common service utilities to improve overall application performance, APIs, security, and IT workflows. In addition, I lead the design and maintenance of Sales Express reporting utilities, so that critical business data is sent to AT&T leadership.`;
   skills: string[] = ['HTML', 'CSS', 'JavaScript', 'jQuery', 'Angular', 'Java', 'Spring', 'Hibernate', 'Oracle SQL'];
   duration = 'June 2016 - December 2018';
+  protect = true;
 
   images: Image[] = [
     new Image(
